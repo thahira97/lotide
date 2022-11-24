@@ -18,12 +18,12 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 const eqObjects = function(object1,object2) {
-  let obj1 = Object.keys(object1);
-  let obj2 = Object.keys(object2);
-  if (obj1.length !== obj2.length) {
+  let obj1Keys = Object.keys(object1);
+  let obj2Keys = Object.keys(object2);
+  if (obj1Keys.length !== obj2Keys.length) {
     return false;
   }
-  for (let key of obj1) {
+  for (let key of obj1Keys) {
     if (Array.isArray(object1[key]) === true && Array.isArray(object2[key]) === true) {
       return eqArrays(object1[key],object2[key]);
     }
