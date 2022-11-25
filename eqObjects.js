@@ -24,14 +24,10 @@ const eqObjects = function(object1,object2) {
     return false;
   }
   for (let key of obj1Keys) {
-    if (Array.isArray(object1[key]) === true && Array.isArray(object2[key]) === true) {
-      return eqArrays(object1[key],object2[key]);
+    if (object1[key] !== object2[key]) {
+      return false;
     }
-     
-    if (object1[key] === object2[key]) {
-      continue;
-    } return true;
-  } return false;
+  } return true;
 };
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
