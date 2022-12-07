@@ -1,9 +1,15 @@
-const assertEqual =  require('../assertEqual');
-const tail = require('../tail')
+const assert = require('chai').assert;
+const tail   = require('../tail');
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-console.log(tail(words)); 
-assertEqual(tail([]).toString(), [].toString());
-assertEqual(tail([1, 2, 3]).toString(), [2, 3].toString());
-assertEqual(tail([4, 5, 6, 7]).toString(), [4, 5].toString());
-assertEqual(tail([8]).toString(), [].toString());
+describe("#tail", () => {
+  it("returns [2,3] for [1, 2, 3]", () => {
+    assert.deepEqual(tail([1, 2, 3]), [2,3]);
+  });
+  it("returns [] for [5]", () => {
+    assert.deepEqual(tail(['5']), []); 
+  });
+  it("returns [8,7,6,5,4] for [9,8,7,6,5,4]", () => {
+    assert.deepEqual(tail([9,8,7,6,5,4]), [8,7,6,5,4]); 
+  });
+
+});
