@@ -1,0 +1,26 @@
+{
+  "name": "@thahira_sheerin/lotide",
+  "version": "1.0.0",
+  "description": "Lotide project in LHL",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thahira97/lotide.git"
+  },
+  "author": "Thahira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thahira97/lotide/issues"
+  },
+  "homepage": "https://github.com/thahira97/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^9.2.2"
+  }
+}
